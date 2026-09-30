@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gameList>
+  <game>
+    <path>./Wetrix.sh</path>
+    <name>Wetrix</name>
+    <desc>ARM64 native recompilation of Wetrix (N64) with a GLES renderer. Bring your own ROM.</desc>
+    <developer>Zed Two</developer>
+    <publisher>Ocean</publisher>
+    <genre>Puzzle</genre>
+  </game>
+</gameList>

@@ -1,0 +1,19 @@
+# Every port builds into its own build/ and packages into dist/; none of it is a
+# source of truth. The game image (*.z64) is copied beside a build and is never
+# committed.
+build/
+# Repositories cloned by tools/fetch_deps.py when they are not next to this one.
+deps/
+dist/
+*.z64
+*.n64
+*.v64
+
+# Logs and captures the debug console and the build scripts write.
+*.log
+*.samples
+*.ppm
+capture.*
+
+__pycache__/
+.vscode/

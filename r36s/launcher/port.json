@@ -1,0 +1,27 @@
+{
+  "version": 4,
+  "name": "wetrix.zip",
+  "items": [
+    "wetrix/",
+    "Wetrix.sh"
+  ],
+  "items_opt": null,
+  "attr": {
+    "title": "Wetrix",
+    "porter": ["Wetrix Enjoyers"],
+    "desc": "ARM64 native recompilation of Wetrix (N64) with a GLES renderer. Bring your own ROM. Credits: N64Recomp / N64ModernRuntime (Wiseguy and contributors); Fast3D (Emill, MaikelChan) via the Perfect Dark port; Wetrix recompilation and port by Wetrix Enjoyers.",
+    "desc_md": null,
+    "inst": "Put your own US Wetrix ROM (.z64, .n64 or .v64, any name) in the wetrix/ folder, then launch. No ROM data is included.",
+    "inst_md": null,
+    "genres": ["puzzle"],
+    "image": {},
+    "rtr": false,
+    "exp": true,
+    "runtime": [],
+    "store": [],
+    "availability": "testing",
+    "reqs": [],
+    "arch": ["aarch64"],
+    "min_glibc": ""
+  }
+}
