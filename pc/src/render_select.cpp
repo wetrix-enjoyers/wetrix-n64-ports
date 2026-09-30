@@ -36,7 +36,7 @@ namespace wetrix::render {
 
 namespace {
 
-Mode g_mode = Mode::Fast3D;
+Mode g_mode = Mode::Hard;
 bool g_mode_from_args = false;
 SDL_Window* g_main_window = nullptr;
 SDL_Window* g_f3d_window = nullptr;
@@ -449,7 +449,7 @@ private:
 } // namespace
 
 void parse_args(int argc, char** argv) {
-    g_mode = parse_mode(std::getenv("WETRIX_RENDERER"), Mode::Fast3D);
+    g_mode = parse_mode(std::getenv("WETRIX_RENDERER"), Mode::Hard);
     for (int i = 1; i + 1 < argc; i++) {
         if (strcmp(argv[i], "--frame-vis") == 0) {
             g_frame_vis = std::max(0, atoi(argv[i + 1]));

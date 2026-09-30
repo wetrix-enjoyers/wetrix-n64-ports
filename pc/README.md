@@ -39,7 +39,7 @@ The runtime ships no renderer; the port brings three, chosen at startup.
 active renderer before the runtime signals DP completion. It also paces the game
 (below). Modes:
 
-- `fast3d` (default), `soft`, `hard`: one renderer in the main window.
+- `hard` (default), `fast3d`, `soft`: one renderer in the main window.
 - `softab`: soft in the main window, f3d in a second.
 - `hardab`: soft in the main window, hard in a second.
 
@@ -135,7 +135,7 @@ pinned to the exe's folder. When the process owns its console, diagnostics go to
 
 | Variable | Effect | Default |
 |---|---|---|
-| `WETRIX_RENDERER` | `fast3d`, `soft`, `softab`, `hard`, `hardab` (`--renderer` overrides) | `fast3d` |
+| `WETRIX_RENDERER` | `hard`, `fast3d`, `soft`, `softab`, `hardab` (`--renderer` overrides) | `hard` |
 | `WETRIX_FRAME_VIS` | VI ticks per game frame (see Pacing). `--frame-vis <n>` overrides; `0` = unpaced | 3 |
 | `WETRIX_DETERMINISTIC` | if set (to anything), the R4300 COUNT register `osGetCount` reads is frozen at 0, so the game's time-based random seed repeats every run; for A/B captures that must match. Unset, it is a real 46.875 MHz counter | unset |
 | `WETRIX_PRESENT_EVERY_VI` | `1` presents on every VI, not only when the picture changed | off |

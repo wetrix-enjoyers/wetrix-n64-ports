@@ -1,10 +1,10 @@
 // Which renderer draws the game, and the windows they draw into.
 //
+//   WETRIX_RENDERER=hard     Wetter's GPU renderer (OpenGL ES 3.0 / GL 3.3); the default
 //   WETRIX_RENDERER=fast3d   the f3d renderer only (OpenGL ES 3.0 / GL 3.3)
 //   WETRIX_RENDERER=soft     Wetter's software renderer (CPU rasterizer,
 //                            presented with SDL_Renderer)
 //   WETRIX_RENDERER=softab   soft in the main window + f3d in a second (A/B)
-//   WETRIX_RENDERER=hard     Wetter's GPU renderer (OpenGL ES 3.0 / GL 3.3)
 //   WETRIX_RENDERER=hardab   soft in the main window + hard in a second (A/B)
 //
 // `--renderer <name>` on the command line does the same and wins over the

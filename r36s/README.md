@@ -60,8 +60,8 @@ The launcher resolves its folder relative to itself, sets the device
 environment, runs the game and the watcher, and logs to `wetrix/log.txt`.
 Select+Start quits (the watcher kills the game).
 
-- **Renderer:** `wetrix/renderer.txt` holds `fast3d`, `soft` or `hard`; without
-  it, fast3d. hard is the one to use: accurate, at the game's paced speed. f3d
+- **Renderer:** `wetrix/renderer.txt` holds `hard`, `fast3d` or `soft`; without
+  it, hard, which is the one to use: accurate, at the game's paced speed. f3d
   shows triangle glitches here, and soft runs slowly.
 - **Environment the launcher sets:**
   - `SDL_VIDEO_DRIVER=kmsdrm`, and `SDL_GAMECONTROLLERCONFIG` from PortMaster's

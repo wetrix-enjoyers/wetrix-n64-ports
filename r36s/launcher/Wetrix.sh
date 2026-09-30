@@ -1,5 +1,5 @@
 #!/bin/bash
-# Wetrix PortMaster launcher (R36S / aarch64, f3d GLES renderer).
+# Wetrix PortMaster launcher (R36S / aarch64; the hard GLES renderer by default).
 #
 # Layout under /roms/ports (or /roms2/ports):
 #   Wetrix.sh               this file (ES entry point)
@@ -41,7 +41,7 @@ cd "$GAMEDIR" || exit 1
 
 > "$GAMEDIR/log.txt" && exec > >(tee "$GAMEDIR/log.txt") 2>&1
 
-echo "=== Wetrix (recomp, f3d GLES) ==="
+echo "=== Wetrix (recomp) ==="
 date
 echo "GAMEDIR=$GAMEDIR CFW=${CFW_NAME:-unknown}"
 
@@ -59,8 +59,8 @@ export SDL_VIDEO_DRIVER=kmsdrm
 # Both the game and the watcher inherit this, so they agree.
 export SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig
 1900bb3e4b4800000011000000010000,GO-Super Gamepad,a:b1,b:b0,x:b2,y:b3,back:b12,start:b13,leftshoulder:b4,rightshoulder:b5,dpup:b8,dpdown:b9,dpleft:b10,dpright:b11,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:b6,righttrigger:b7,platform:Linux,"
-# wetrix/renderer.txt, if present, names the renderer (fast3d, soft or hard).
-RENDERER=fast3d
+# wetrix/renderer.txt, if present, names the renderer (hard, fast3d or soft).
+RENDERER=hard
 [ -f "$GAMEDIR/renderer.txt" ] && RENDERER="$(tr -d '[:space:]' < "$GAMEDIR/renderer.txt")"
 echo "renderer: $RENDERER"
 export WETRIX_RENDERER="$RENDERER"
